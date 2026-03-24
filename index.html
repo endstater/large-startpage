@@ -3,17 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LARGE</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>home</title>
 </head>
-<body>
-<input type="text" id="searchMarks">
-<div id="content">
+<body class="
+w-lvw
+h-lvh
+place-content-center
+text-[#cde]
+">
+<div class="
+mx-auto
+w-2/3
+bg-[#13131c]
+rounded-2xl
+p-8
+">
+
+<input type="text" id="searchMarks" class="w-full">
+<div id="content" class="
+min-h-[5rem]
+py-4
+max-h-[30rem]
+overflow-scroll
+">
 
 </div>
-<br><br>
-<input type="text" id="addMarkUrl">
-<input type="text" id="addMarkText">
-<button id="addButton">A</button>
-</body>
+
+<div class="
+w-full
+flex
+sm:flex-col
+lg:flex-row
+">
+<input type="text" id="addMarkUrl" class="lg:flex-1 mx-1 my-1">
+<input type="text" id="addMarkText" class="lg:flex-1 mx-1 my-1">
+<button id="addButton" class="
+bg-[#23262f]
+size-[2rem]
+rounded-xl
+my-1
+">+</button>
+</div>
+
+</div>
 <script src="main.js"></script>
+<canvas id="gl" width="1080" height="720" class="
+sm:h-lvh lg:h-auto
+lg:w-lvw sm:w-auto
+"></canvas>
+
+<script src="shader.js"></script>
+</body>
 </html>

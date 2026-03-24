@@ -1,0 +1,33 @@
+:root {
+    --blue-card: #d5d5d5;
+}
+
+#gl {
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    overscroll-behavior: contain;
+}
+
+body{
+    overflow: hidden;
+    font-family: Montserrat;
+}
+
+input {
+    background-color: #23262f;
+    border-radius: 1rem;
+    outline: none;
+    height: 2rem;
+    padding-left: 1rem;
+}
+
+.mcard{
+    box-shadow: 0 0 0rem .4rem #000, 0 .6rem 0rem .4rem #000;
+    transition:  .3s;
+}
+
+.mcard.selected{
+    box-shadow: 0 0 0rem .4rem var(--blue-card), 0 .6rem 0rem .4rem var(--blue-card);
+}
