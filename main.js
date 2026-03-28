@@ -127,7 +127,6 @@ p-2
 mcard
 h-[4rem]
 w-[10rem]
-my-8
 rounded-xl
 mx-auto
 my-3
@@ -167,10 +166,8 @@ p-2
 auto-rows-[5rem] gap-5 
             `);
         content.appendChild(previewContainer);
-        for(let [key,value] of Object.entries(data['links'])){
-            if(comparable(value['text']).indexOf(comparable(exp)) !== -1){
-                addPreviewDiv(key, value,previewContainer);
-            }
+        for(let key of data['last']){
+            if(data['links'][key]) addPreviewDiv(key, data['links'][key],previewContainer);
         }
     return;
     }
@@ -195,5 +192,7 @@ function addMark(){
     updateData();
     draw();
 }
-
-draw();
+window.addEventListener("load",()=>{
+	searchMarks.focus();
+    raw();
+});
